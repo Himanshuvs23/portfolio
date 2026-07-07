@@ -1,0 +1,96 @@
+.job-card {
+  padding: 25px 20px;
+  background-color: var(--jobs-jobcard-background);
+  box-shadow: 0px 3px 6px -2px rgba(0, 0, 0, 0.2);
+  margin: 48px 0;
+  line-height: 2;
+  position: relative;
+  color: var(--main-text-color);
+  border-radius: 10px;
+  transition: all 0.6s ease-in-out;
+}
+
+.job-card h2 {
+  font-size: 20px;
+}
+
+.job-card h3 {
+  color: var(--main-text-color);
+  font-size: 16px;
+}
+
+.job-card-company-logo {
+  width: 90px;
+  height: 40px;
+  object-fit: contain;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+}
+
+.job-card-timeline {
+  position: absolute;
+  left: -125px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.job-card-date {
+  font-weight: 500;
+}
+
+.job-card-company-links {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.job-card-company-links img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.job-card-highlights {
+  margin: 12px 40px 0 18px;
+  line-height: 1.5;
+}
+
+.job-card-highlights li {
+  margin-bottom: 8px;
+  color: var(--text-color-one);
+}
+
+.job-card::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px solid var(--main-text-color);
+  border-radius: 50%;
+  background: var(--background-two);
+  transition: all 0.6s ease-in-out;
+}
+
+.job-card:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (max-width: 720px) {
+  .job-card-timeline {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .job-card-company-links {
+    position: static;
+    margin-top: 10px;
+  }
+}

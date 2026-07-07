@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import classNames from "classnames/bind";
 import { JobCard } from "@/components";
 import { IJobsSectionProps } from "@/utils/typings/typings";
-import styles from "./JobsSection.module.scss";
+import styles from "./JobsSection.module.css";
 
 const cx = classNames.bind(styles);
 

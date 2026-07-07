@@ -6,7 +6,7 @@ import classNames from "classnames/bind";
 import { ProjectCard } from "@/components";
 import { IProjects, IProjectsSectionProps } from "@/utils/typings/typings";
 import { TechStack } from "@/utils/constants/constants";
-import styles from "./ProjectsSection.module.scss";
+import styles from "./ProjectsSection.module.css";
 
 const cx = classNames.bind(styles);
 

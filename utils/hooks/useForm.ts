@@ -83,7 +83,9 @@ export const useForm = () => {
       } catch (err) {
         console.log(err);
         setLoading(false);
-        toast.error("Form Submission Failed. Please send me an email !");
+        toast.error(
+          "Form Submission Failed. Please send me an email at golushivde23@gmail.com instead."
+        );
       }
     }
   };

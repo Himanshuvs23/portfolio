@@ -4,7 +4,7 @@ import Image from "next/image";
 import classNames from "classnames/bind";
 import { Months } from "@/utils/constants/constants";
 import { IJobCardProps } from "@/utils/typings/typings";
-import styles from "./JobCard.module.scss";
+import styles from "./JobCard.module.css";
 
 const cx = classNames.bind(styles);
 
@@ -32,6 +32,13 @@ const JobCard: NextPage<IJobCardProps> = ({ job }) => {
           ? `${Months[parseInt(job?.to?.split("-")[1])]}, ${job?.to?.split("-")[0]}`
           : "Present"}
       </div>
+      {job?.highlights && (
+        <ul className={cx("job-card-highlights")}>
+          {job.highlights.map(highlight => (
+            <li key={highlight}>{highlight}</li>
+          ))}
+        </ul>
+      )}
       <div className={cx("job-card-company-links")}>
         {job?.companyLinkedin && (
           <Image

@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import "../styles/main.scss";
+import "../styles/main.css";
 
 export const metadata: Metadata = {
-  title: "Himanshu Kashyap",
+  title: "Himanshu Vilas Shivde",
   description:
-    "Hey, I'm Himanshu Kashyap a Software Developer from Dehradun, Uttarakhand. Here's my portfolio where you can see all my projects, blogs, and achievements.",
-  authors: [{ name: "Himanshu Kashyap", url: "https://www.himankash.com/" }],
-  creator: "Himanshu Kashyap",
-  publisher: "Himanshu Kashyap",
+    "Portfolio of Himanshu Vilas Shivde, a Full Stack Developer building scalable web applications with React, Next.js, Node.js, Express, MongoDB, PostgreSQL, CI/CD, and AI-powered tools.",
+  authors: [{ name: "Himanshu Vilas Shivde", url: "https://github.com/Himanshuvs23" }],
+  creator: "Himanshu Vilas Shivde",
+  publisher: "Himanshu Vilas Shivde",
   keywords: [
-    "Himanshu Kashyap",
-    "Himanshu Kashyap portfolio",
+    "Himanshu Vilas Shivde",
+    "Himanshu Shivde",
+    "Himanshu Shivde portfolio",
     "software developer",
     "web developer",
     "React developer",
@@ -19,21 +20,13 @@ export const metadata: Metadata = {
     "full-stack developer",
     "frontend engineer",
     "JavaScript developer",
-    "Dehradun software developer",
-    "best portfolio websites",
-    "personal website for developers",
-    "programming blogs",
-    "tech blog",
-    "coding projects",
-    "himan_kash",
-    "himanshu",
-    "kashyap",
-    "himanshu kashyap",
-    "iamhiman",
-    "lpu",
-    "dehradun",
-    "software developer",
-    "web developer",
+    "Node.js developer",
+    "MongoDB developer",
+    "Java developer",
+    "TypeScript developer",
+    "AI application developer",
+    "Amravati software developer",
+    "Himanshuvs23",
   ],
   robots: {
     index: true,
@@ -50,7 +43,7 @@ export const metadata: Metadata = {
   },
   icons: { icon: "/favicon.ico" },
   alternates: {
-    canonical: "https://www.himankash.com/",
+    canonical: "https://github.com/Himanshuvs23",
   },
 };
 

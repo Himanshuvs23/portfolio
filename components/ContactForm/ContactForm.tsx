@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import classNames from "classnames/bind";
 import { IContactFormProps } from "@/utils/typings/typings";
-import styles from "./ContactForm.module.scss";
+import styles from "./ContactForm.module.css";
 
 const cx = classNames.bind(styles);
 

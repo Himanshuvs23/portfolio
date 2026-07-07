@@ -1,0 +1,201 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 45px;
+  background-color: var(--background-two);
+  width: 100%;
+  min-height: 90vh;
+  gap: 40px;
+}
+
+.about-left {
+  flex: 0 0 48%;
+  max-width: 580px;
+}
+
+.about-left-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: 1px;
+  font-size: clamp(3rem, 4vw, 4.6rem);
+  margin-bottom: 28px;
+  color: var(--main-text-color);
+  line-height: 1.05;
+  font-family: "Fira Code", "JetBrains Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  white-space: nowrap;
+}
+
+.about-left-command {
+  color: var(--text-color-one);
+  opacity: 0.75;
+  font-size: 0.86em;
+}
+
+.about-left-typing {
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  border-right: 2px solid var(--main-text-color);
+  animation: typing 3.2s steps(32, end) 0.5s forwards, blink-caret 0.75s step-end infinite;
+  width: 0;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--main-text-color);
+  }
+}
+
+.about-left-text {
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  color: var(--text-color-two);
+  line-height: 1.9;
+  max-width: 680px;
+}
+
+.about-left-socialMedia {
+  margin-top: 40px;
+  display: flex;
+  gap: 14px;
+}
+
+.about-left-socialMedia img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.about-left-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.about-left-action {
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--main-text-color);
+  background: transparent;
+  color: var(--main-text-color);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-left-action:hover {
+  background: var(--main-text-color);
+  color: var(--background-two);
+}
+
+.about-left-action.resume {
+  background: var(--text-color-two);
+  color: var(--background-two);
+}
+
+.about-left-action.resume:hover {
+  background: var(--main-text-color);
+}
+
+.about-right {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-right-profilePic {
+  border-radius: 50%;
+  margin: 20px;
+  height: 380px;
+  width: 380px;
+  background-clip: content-box, border-box;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/assets/dd15cdab08b34c128b638f7b0a1e1343 Small.jpeg"), linear-gradient(225deg, var(--about-profilepic-one), var(--about-profilepic-two));
+  background-repeat: no-repeat;
+  padding: 14px;
+  position: relative;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.09);
+  animation: pulse-ring 6s ease-in-out infinite;
+}
+
+.about-right-profilePic::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(0,0,0,0.1));
+  -webkit-mask: radial-gradient(circle at center, transparent 0%, transparent calc(100% - 10px), black calc(100% - 10px), black 100%);
+  mask: radial-gradient(circle at center, transparent 0%, transparent calc(100% - 10px), black calc(100% - 10px), black 100%);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+@keyframes pulse-ring {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.09);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 28px 90px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about-left-head {
+    font-size: 28px;
+  }
+
+  .about-left-text {
+    font-size: 18px;
+  }
+
+  .about-right-profilePic {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about {
+    flex-direction: column-reverse;
+    padding: 50px 25px;
+  }
+
+  .about-left {
+    text-align: center;
+  }
+
+  .about-left-head {
+    font-size: 24px;
+  }
+
+  .about-left-text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .about-right-profilePic {
+    height: 200px;
+    width: 200px;
+  }
+}

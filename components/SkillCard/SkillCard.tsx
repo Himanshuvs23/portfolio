@@ -1,9 +1,8 @@
 import React from "react";
 import type { NextPage } from "next";
 import classNames from "classnames/bind";
-import Image from "next/image";
 import { ISkillCardProps } from "@/utils/typings/typings";
-import styles from "./SkillCard.module.scss";
+import styles from "./SkillCard.module.css";
 
 const cx = classNames.bind(styles);
 
@@ -13,14 +12,14 @@ const SkillCard: NextPage<ISkillCardProps> = ({ skills, skillName }) => {
       <p className={cx("skill-card-heading")}>{skillName}</p>
       <div className={cx("skill-card-container")}>
         {skills?.map(skill => (
-          <div
+          <button
             key={skill?.id}
+            type="button"
             className={cx("skill-card-container-item")}
-            onClick={() => window.open(skill?.url, "_blank")}
+            onClick={() => skill?.url && window.open(skill?.url, "_blank")}
           >
-            <Image src={skill?.image?.url} alt="skill-url" width={50} height={50} priority />
-            <p>{skill?.skill}</p>
-          </div>
+            {skill?.skill}
+          </button>
         ))}
       </div>
     </div>

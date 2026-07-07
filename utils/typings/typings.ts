@@ -27,6 +27,7 @@ export interface IJobs {
   from: string;
   to: string;
   logo: IUrl;
+  highlights?: string[];
 }
 
 export interface IProjects {

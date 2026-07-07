@@ -3,24 +3,19 @@
 import { useState } from "react";
 import type { NextPage } from "next";
 import classNames from "classnames/bind";
-import Image from "next/image";
-import { SECTION, THEME } from "@/utils/constants/constants";
+import { SECTION } from "@/utils/constants/constants";
 import { INavbarProps } from "@/utils/typings/typings";
-import styles from "./Navbar.module.scss";
+import styles from "./Navbar.module.css";
 
 const cx = classNames.bind(styles);
 
-const Navbar: NextPage<INavbarProps> = ({
-  onNavItemClick = () => {},
-  switchTheme = () => {},
-  theme,
-}) => {
+const Navbar: NextPage<INavbarProps> = ({ onNavItemClick = () => {} }) => {
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
 
   return (
     <>
       <nav className={cx("navbar")}>
-        <div className={cx("menu")}>
+        <div className={cx("menu")}> 
           <input
             className={cx("checked")}
             type="checkbox"
@@ -31,17 +26,10 @@ const Navbar: NextPage<INavbarProps> = ({
           <div className={cx("line", showSidebar ? "line-2" : "line2")} />
           <div className={cx("line", showSidebar ? "line-3" : "line3")} />
         </div>
-        <p className={cx("navbar-name")}>
-          <span>Himanshu</span>
-          <Image
-            src={theme === THEME.LIGHT ? "/assets/sun.webp" : "/assets/moon.webp"}
-            alt="sun-moon-image"
-            width={45}
-            height={45}
-            priority
-            onClick={switchTheme}
-          />
-        </p>
+        <div className={cx("navbar-brand")}> 
+          <p className={cx("navbar-name")}>Himanshu</p>
+          <span className={cx("navbar-signature")}>\'23</span>
+        </div>
         <div className={cx("navbar-list")}>
           <p className={cx("navbar-list-item")} onClick={() => onNavItemClick(SECTION.ABOUT)}>
             About
@@ -76,6 +64,20 @@ const Navbar: NextPage<INavbarProps> = ({
         <p className={cx("sidebar-item")} onClick={() => onNavItemClick(SECTION.CONTACT)}>
           Contact
         </p>
+      </div>
+      <div className={cx("bottom-nav")}> 
+        <button className={cx("bottom-nav-item")} type="button" onClick={() => onNavItemClick(SECTION.ABOUT)}>
+          About
+        </button>
+        <button className={cx("bottom-nav-item")} type="button" onClick={() => onNavItemClick(SECTION.JOBS)}>
+          Work
+        </button>
+        <button className={cx("bottom-nav-item")} type="button" onClick={() => onNavItemClick(SECTION.PROJECTS)}>
+          Projects
+        </button>
+        <button className={cx("bottom-nav-item")} type="button" onClick={() => onNavItemClick(SECTION.SKILLS)}>
+          Skills
+        </button>
       </div>
     </>
   );

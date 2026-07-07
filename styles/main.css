@@ -1,0 +1,62 @@
+@font-face {
+  font-family: Circular Std;
+  src: url("/assets/CircularStd-Book.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Circular Std", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  min-height: 100%;
+  background-color: var(--background-one);
+  color: var(--main-text-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --background-one: #ffffff;
+  --background-two: #ffffff;
+  --secondary-background-one: #f5f5f5;
+  --main-text-color: #000000;
+  --text-color-one: #111111;
+  --text-color-two: #333333;
+  --border-one: #000000;
+  --navbar-background: rgba(255, 255, 255, 0.72);
+  --navbar-border: rgba(0, 0, 0, 0.08);
+  --bottom-nav-background: rgba(255, 255, 255, 0.76);
+  --about-profilepic-one: #f5f5f5;
+  --about-profilepic-two: #e5e5e5;
+  --jobs-jobcard-background: #ffffff;
+  --skills-card-border: #000000;
+  --skills-card-shadow: rgba(0, 0, 0, 0.1);
+  --circular-loader: #000000;
+}
+
+[data-theme="dark"] {
+  --background-one: #000000;
+  --background-two: #000000;
+  --secondary-background-one: #111111;
+  --main-text-color: #ffffff;
+  --text-color-one: #dddddd;
+  --text-color-two: #bbbbbb;
+  --border-one: #ffffff;
+  --navbar-background: rgba(10, 10, 10, 0.88);
+  --navbar-border: rgba(255, 255, 255, 0.12);
+  --bottom-nav-background: rgba(20, 20, 20, 0.9);
+  --about-profilepic-one: #111111;
+  --about-profilepic-two: #222222;
+  --jobs-jobcard-background: #111111;
+  --skills-card-border: #ffffff;
+  --skills-card-shadow: rgba(255, 255, 255, 0.1);
+  --circular-loader: #ffffff;
+}

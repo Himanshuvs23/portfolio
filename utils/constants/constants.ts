@@ -20,22 +20,21 @@ export enum Months {
 export const SKILLSET = {
   LANGUAGES: "languages",
   FRONTEND: "frontend",
-  UI_LIBRARIES: "uilibraries",
   BACKEND: "backend",
   DATABASE: "database",
-  HEADLESS_CMS: "headless cms",
-  TESTING: "testing",
+  ARCHITECTURE: "architecture",
+  CORE: "core",
   TOOLS: "tools",
 };
 
 export const TechStack = {
   All: "All",
   React: "React",
-  NextJs: "NextJs",
-  JavaScript: "JavaScript",
+  NextJs: "Next.js",
   TypeScript: "TypeScript",
-  Php: "PHP",
-  Cpp: "C++",
+  NodeJs: "Node.js",
+  MongoDB: "MongoDB",
+  AI: "AI",
 };
 
 export const SECTION = {

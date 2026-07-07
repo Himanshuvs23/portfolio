@@ -1,0 +1,18 @@
+.skills {
+  padding: 40px 25px;
+  background-color: var(--background-two);
+}
+
+.skills-heading {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--main-text-color);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}

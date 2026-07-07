@@ -1,0 +1,35 @@
+.home-page-layout .header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.scroll-up {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border: 2px solid var(--main-text-color);
+  padding: 8px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.error-container,
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 24px;
+  background-color: var(--background-one);
+  color: var(--main-text-color);
+}
+
+.loader-container {
+  padding: 0 24px;
+}

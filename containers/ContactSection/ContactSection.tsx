@@ -4,7 +4,7 @@ import classNames from "classnames/bind";
 import Image from "next/image";
 import { CircularLoader, ContactForm } from "@/components";
 import { useForm } from "@/utils/hooks";
-import styles from "./ContactSection.module.scss";
+import styles from "./ContactSection.module.css";
 
 const cx = classNames.bind(styles);
 
@@ -16,7 +16,7 @@ const ContactSection: NextPage = () => {
       <h1 className={cx("contact-heading")}>Contact Me</h1>
       <div className={cx("contact-email")}>
         <Image src="/assets/gmail.webp" alt="gmail" width={30} height={30} priority />
-        <span>himanshu27kashyap@gmail.com</span>
+        <span>golushivde23@gmail.com</span>
       </div>
       {isFormSubmitting ? (
         <div className={cx("contact-submission")}>

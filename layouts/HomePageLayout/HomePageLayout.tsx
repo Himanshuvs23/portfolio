@@ -17,7 +17,7 @@ import {
 import { SECTION } from "@/utils/constants/constants";
 import { IHomePageLayoutProps } from "@/utils/typings/typings";
 import { useScroll, useTheme } from "@/utils/hooks";
-import styles from "./HomePageLayout.module.scss";
+import styles from "./HomePageLayout.module.css";
 
 const cx = classNames.bind(styles);
 
