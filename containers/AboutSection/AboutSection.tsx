@@ -68,7 +68,7 @@ const AboutSection: NextPage = () => {
           <button
             className={cx("about-left-action", "resume")}
             type="button"
-            onClick={() => window.open("https://drive.google.com/file/d/1wWkT-QLtJp7zXVQ-a8DRRviVJgwFr7GE/view?usp=drive_link", "_blank")}
+            onClick={() => window.open("https://drive.google.com/file/d/1R6xkBY-CelET__icokuehnFEuEq6nonN/view?usp=sharing", "_blank")}
           >
             Resume
           </button>
