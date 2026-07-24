@@ -13,7 +13,7 @@
 .jobs-timeline-container {
   max-width: 500px;
   margin: 0 auto;
-  border-left: 3px solid var(--main-text-color);
+  border-left: 3px solid var(--border-strong);
   padding-left: 32px;
 }
 

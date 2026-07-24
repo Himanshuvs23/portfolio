@@ -32,7 +32,7 @@
 
 .skill-card-container-item {
   padding: 12px 18px;
-  border: 1px solid rgba(0, 0, 0, 0.07);
+  border: 1px solid var(--border-one);
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.04);
   color: var(--main-text-color);

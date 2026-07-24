@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 45px;
+  padding: 100px 45px 80px;
   background-color: var(--background-two);
   width: 100%;
   min-height: 90vh;
@@ -130,15 +130,19 @@
   margin: 20px;
   height: 380px;
   width: 380px;
-  background-clip: content-box, border-box;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/assets/dd15cdab08b34c128b638f7b0a1e1343 Small.jpeg"), linear-gradient(225deg, var(--about-profilepic-one), var(--about-profilepic-two));
-  background-repeat: no-repeat;
-  padding: 14px;
+  background: linear-gradient(225deg, var(--about-profilepic-one), var(--about-profilepic-two));
+  border: 1px solid var(--border-one);
+  padding: 12px;
   position: relative;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 24px 80px var(--surface-shadow);
   animation: pulse-ring 6s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.about-right-profilePic img {
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 12px;
 }
 
 .about-right-profilePic::before {
@@ -157,11 +161,11 @@
 @keyframes pulse-ring {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 24px 80px var(--surface-shadow);
   }
   50% {
     transform: scale(1.02);
-    box-shadow: 0 28px 90px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 28px 90px var(--surface-shadow);
   }
 }
 

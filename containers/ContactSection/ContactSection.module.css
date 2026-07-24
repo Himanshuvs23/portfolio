@@ -20,6 +20,7 @@
   width: 100%;
   margin: 0 auto 30px auto;
   border-radius: 8px;
+  border: 1px solid var(--border-one);
   word-break: break-all;
   color: var(--text-color-one);
 }

@@ -28,7 +28,7 @@
 .contact-form-formcontrol-input textarea {
   padding: 12px;
   background-color: var(--secondary-background-one);
-  border: 1px solid var(--text-color-two);
+  border: 1px solid var(--border-one);
   border-radius: 8px;
   width: 100%;
   font-size: 16px;
@@ -36,6 +36,12 @@
   margin-bottom: 5px;
   color: var(--main-text-color);
   resize: vertical;
+}
+
+.contact-form-formcontrol-input:focus,
+.contact-form-formcontrol-input textarea:focus {
+  border-color: var(--border-strong);
+  box-shadow: 0 0 0 3px rgba(125, 135, 148, 0.18);
 }
 
 .contact-form-formcontrol-error {

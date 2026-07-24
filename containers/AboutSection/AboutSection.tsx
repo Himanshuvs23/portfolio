@@ -74,8 +74,16 @@ const AboutSection: NextPage = () => {
           </button>
         </div>
       </div>
-     <div className={cx("about-right")}>
-        <div className={cx("about-right-profilePic")} />
+      <div className={cx("about-right")}>
+        <div className={cx("about-right-profilePic")}>
+          <Image
+            src="/assets/profilePic.jpeg"
+            alt="Himanshu Shivde profile"
+            fill
+            sizes="(max-width: 600px) 72vw, 380px"
+            priority
+          />
+        </div>
       </div>
     </div>
   );
