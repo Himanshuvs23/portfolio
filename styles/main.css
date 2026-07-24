@@ -30,7 +30,7 @@ a {
   color: inherit;
 }
 
-[data-theme="dark"]{
+ :root  {
   --background-one: #cdcdcd;
   --background-two: #9d9898;
   --secondary-background-one: #ffffff;
@@ -52,7 +52,7 @@ a {
   --circular-loader: #000000;
 }
 
- :root  {
+[data-theme="dark"]  {
   --background-one: #000000;
   --background-two: #000000;
   --secondary-background-one: #111111;

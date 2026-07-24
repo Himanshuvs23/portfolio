@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     icon: "/hs-favicon.png",
   },
   alternates: {
-    canonical: "https://your-domain.vercel.app",
+    canonical: "https://himanshushivde.vercel.app/",
   },
 };
 
@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body data-theme="dark">
         {children}
 
         {GA_ID && (
