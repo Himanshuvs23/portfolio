@@ -98,5 +98,5 @@ export interface IContactFormProps {
   formData: IFormData;
   formRef: React.Ref<HTMLFormElement | null>;
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  handleFormSubmit: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  handleFormSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }

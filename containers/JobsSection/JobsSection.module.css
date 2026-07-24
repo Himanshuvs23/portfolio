@@ -4,7 +4,7 @@
 }
 
 .jobs-heading {
-  font-size: 42px;
+  font-size: clamp(32px, 6vw, 42px);
   text-align: center;
   margin-bottom: 20px;
   color: var(--main-text-color);
@@ -18,8 +18,20 @@
 }
 
 @media only screen and (max-width: 720px) {
+  .jobs {
+    padding: 36px 18px;
+  }
+
   .jobs-timeline-container {
     max-width: 100%;
     margin-left: 8px;
+    padding-left: 24px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .jobs-timeline-container {
+    margin-left: 0;
+    padding-left: 18px;
   }
 }

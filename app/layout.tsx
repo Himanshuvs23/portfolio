@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/hs-favicon.png" },
   alternates: {
     canonical: "https://github.com/Himanshuvs23",
   },

@@ -3,24 +3,26 @@
   background-color: var(--secondary-background-one);
   border: 1px solid var(--text-color-two);
   border-radius: 10px;
-  width: 250px;
+  width: min(100%, 450px);
   text-align: center;
   color: var(--text-color-one);
   transition: all 0.5s ease-in-out;
 }
 
 .project-card img {
-  width: 200px;
-  height: 120px;
-  object-fit: fill;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .project-card-placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 120px;
+  width: 100%;
+  aspect-ratio: 5 / 3;
   margin: 0 auto;
   background: var(--background-two);
   color: var(--main-text-color);
@@ -41,6 +43,7 @@
 .project-card-description {
   font-size: 16px;
   word-spacing: 1px;
+  line-height: 1.55;
 }
 
 .project-card-techStack {
@@ -67,11 +70,26 @@
 .project-card-links img {
   width: 35px;
   height: 35px;
+  aspect-ratio: auto;
   object-fit: contain;
   border: 1px solid var(--text-color-two);
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 520px) {
+  .project-card {
+    padding: 12px;
+  }
+
+  .project-card-title {
+    font-size: 18px;
+  }
+
+  .project-card-placeholder {
+    font-size: 28px;
+  }
 }
 
 .project-card-links img:hover {

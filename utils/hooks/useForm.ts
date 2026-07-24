@@ -16,7 +16,7 @@ export const useForm = () => {
     setFormData({ ...formData, [e.target.name]: { value: e.target.value, errorMessage: "" } });
   };
 
-  const handleFormSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const tempObj = { name: "", email: "", message: "" };
     const lettersregex = /^[a-zA-Z ]*$/;
@@ -61,31 +61,41 @@ export const useForm = () => {
     setFormData({ ...tempFormData });
 
     if (!tempObj.name && !tempObj.email && !tempObj.message) {
-      setFormData({
-        name: { value: "", errorMessage: "" },
-        email: { value: "", errorMessage: "" },
-        message: { value: "", errorMessage: "" },
-      });
       setLoading(true);
 
       try {
+        const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
+        const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+        const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+
+        if (!serviceId || !templateId || !publicKey || !formRef.current) {
+          throw new Error("EmailJS configuration is missing.");
+        }
+
         const response = await emailjs.sendForm(
-          process.env.NEXT_PUBLIC_SERVICE_ID!,
-          process.env.NEXT_PUBLIC_TEMPLATE_ID!,
-          formRef.current!,
-          process.env.NEXT_PUBLIC_PUBLIC_KEY!,
+          serviceId,
+          templateId,
+          formRef.current,
+          publicKey,
         );
 
-        if (response.status === 200) {
-          setLoading(false);
-          toast.success("Message Sent, I will contact you soon !");
+        if (response.status !== 200) {
+          throw new Error(`EmailJS failed with status ${response.status}.`);
         }
+
+        setFormData({
+          name: { value: "", errorMessage: "" },
+          email: { value: "", errorMessage: "" },
+          message: { value: "", errorMessage: "" },
+        });
+        toast.success("Message Sent, I will contact you soon !");
       } catch (err) {
-        console.log(err);
-        setLoading(false);
+        console.error(err);
         toast.error(
           "Form Submission Failed. Please send me an email at golushivde23@gmail.com instead."
         );
+      } finally {
+        setLoading(false);
       }
     }
   };

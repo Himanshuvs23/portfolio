@@ -13,7 +13,12 @@ const ContactForm: NextPage<IContactFormProps> = ({
   handleFormSubmit = () => {},
 }) => {
   return (
-    <form className={cx("contact-form")} autoComplete="off" ref={formRef}>
+    <form
+      className={cx("contact-form")}
+      autoComplete="off"
+      ref={formRef}
+      onSubmit={handleFormSubmit}
+    >
       <div className={cx("contact-form-formcontrol")}>
         <label htmlFor="name" className={cx("contact-form-formcontrol-label")}>
           Name :
@@ -63,7 +68,7 @@ const ContactForm: NextPage<IContactFormProps> = ({
         </p>
       </div>
       <div className={cx("contact-form-formcontrol")}>
-        <button className={cx("contact-form-formcontrol-submit")} onClick={handleFormSubmit}>
+        <button className={cx("contact-form-formcontrol-submit")} type="submit">
           Submit
         </button>
       </div>

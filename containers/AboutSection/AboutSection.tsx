@@ -13,8 +13,7 @@ const AboutSection: NextPage = () => {
     <div className={cx("about")}>
       <div className={cx("about-left")}>
         <h1 className={cx("about-left-head")}>
-          <span className={cx("about-left-command")}>$</span>
-          <span className={cx("about-left-typing")}>Hi, I&apos;m Himanshu Vilas Shivde</span>
+          <span className={cx("about-left-typing")}>Hi, I&apos;m Himanshu S</span>
         </h1>
         <p className={cx("about-left-text")}>
           Software Engineer and Full Stack Developer focused on scalable web applications with Java,
@@ -48,6 +47,15 @@ const AboutSection: NextPage = () => {
             priority
             onClick={() => window.open("mailto:golushivde23@gmail.com", "_blank")}
           />
+          <Image
+            src="/assets/leetcode.png"
+            alt="LeetCode"
+            width={100}
+            height={30}
+            priority
+            onClick={() => window.open("https://leetcode.com/u/himanshushivde/", "_blank")}
+          />
+
         </div>
         <div className={cx("about-left-actions")}> 
           <button
@@ -66,7 +74,7 @@ const AboutSection: NextPage = () => {
           </button>
         </div>
       </div>
-      <div className={cx("about-right")}>
+     <div className={cx("about-right")}>
         <div className={cx("about-right-profilePic")} />
       </div>
     </div>

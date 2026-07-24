@@ -21,7 +21,7 @@ export const portfolioData: ICmsApiResponse = {
       companyUrl: "https://gpsarolamaroti.in",
       from: "2025-11",
       to: "2026-04",
-      logo: { url: "" },
+      logo: { url: "/assets/project-smgp.png" },
       highlights: [
         "Architected, developed, and deployed 3 production-grade village governance platforms using Next.js, React, TypeScript, Node.js, MongoDB, and Cloudinary.",
         "Built 39 REST APIs, 13 MongoDB collections, and 15+ feature modules, reducing manual village workflow effort by 65-70%.",
@@ -48,7 +48,7 @@ export const portfolioData: ICmsApiResponse = {
         { text: "MongoDB" },
         { text: "Cloudinary" },
       ],
-      image: { url: "" },
+      image: { url: "/assets/project-smgp.png" },
     },
     {
       id: "ai-powered-autonomous-task-agent",

@@ -4,7 +4,7 @@
 }
 
 .contact-heading {
-  font-size: 42px;
+  font-size: clamp(32px, 6vw, 42px);
   text-align: center;
   margin-bottom: 50px;
   color: var(--main-text-color);
@@ -17,10 +17,15 @@
   padding: 15px;
   background-color: var(--secondary-background-one);
   max-width: 400px;
+  width: 100%;
   margin: 0 auto 30px auto;
   border-radius: 8px;
   word-break: break-all;
   color: var(--text-color-one);
+}
+
+.contact-email span {
+  min-width: 0;
 }
 
 .contact-email img {
@@ -40,6 +45,26 @@
   margin: 80px auto;
   padding: 0 20px;
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact {
+    padding: 36px 18px;
+  }
+
+  .contact-heading {
+    margin-bottom: 32px;
+  }
+
+  .contact-email {
+    align-items: flex-start;
+    padding: 14px;
+  }
+
+  .contact-email img {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
 }
 
 .contact-submission-head {

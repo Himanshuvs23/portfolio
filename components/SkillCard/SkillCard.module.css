@@ -40,7 +40,21 @@
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-  white-space: nowrap;
+  text-align: center;
+}
+
+@media only screen and (max-width: 420px) {
+  .skill-card {
+    margin-bottom: 30px;
+  }
+
+  .skill-card-container {
+    gap: 10px;
+  }
+
+  .skill-card-container-item {
+    flex: 1 1 calc(50% - 10px);
+  }
 }
 
 .skill-card-container-item:hover {

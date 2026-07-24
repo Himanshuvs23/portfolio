@@ -18,7 +18,7 @@ const JobCard: NextPage<IJobCardProps> = ({ job }) => {
           src={job?.logo?.url}
           alt="company-logo"
           width={90}
-          height={40}
+          height={100}
           className={cx("job-card-company-logo")}
           priority
         />

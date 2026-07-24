@@ -13,9 +13,16 @@
 html,
 body {
   min-height: 100%;
+  overflow-x: hidden;
   background-color: var(--background-one);
   color: var(--main-text-color);
   -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
 }
 
 a {
