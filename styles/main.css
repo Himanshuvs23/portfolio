@@ -31,8 +31,8 @@ a {
 }
 
 [data-theme="dark"]{
-  --background-one: #000000;
-  --background-two: #000000;
+  --background-one: #cdcdcd;
+  --background-two: #9d9898;
   --secondary-background-one: #ffffff;
   --main-text-color: #000000;
   --text-color-one: #111111;
