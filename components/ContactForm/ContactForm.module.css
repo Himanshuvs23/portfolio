@@ -3,10 +3,14 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 500px;
+  max-width: 680px;
   width: 100%;
   margin: auto;
-  padding: 0 20px;
+  padding: 28px;
+  background: var(--background-two);
+  border: 3px solid var(--border-one);
+  border-radius: 8px;
+  box-shadow: 10px 10px 0 var(--surface-shadow);
 }
 
 .contact-form-formcontrol {
@@ -18,17 +22,17 @@
 }
 
 .contact-form-formcontrol-label {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: 18px;
   align-self: flex-start;
-  color: var(--text-color-two);
+  color: var(--main-text-color);
+  font-weight: 800;
 }
 
-.contact-form-formcontrol-input,
-.contact-form-formcontrol-input textarea {
-  padding: 12px;
-  background-color: var(--secondary-background-one);
-  border: 1px solid var(--border-one);
+.contact-form-formcontrol-input {
+  padding: 14px 16px;
+  background-color: var(--background-two);
+  border: 3px solid var(--border-one);
   border-radius: 8px;
   width: 100%;
   font-size: 16px;
@@ -36,12 +40,22 @@
   margin-bottom: 5px;
   color: var(--main-text-color);
   resize: vertical;
+  box-shadow: 5px 5px 0 var(--surface-shadow);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.contact-form-formcontrol-input:focus,
-.contact-form-formcontrol-input textarea:focus {
+input.contact-form-formcontrol-input {
+  min-height: 54px;
+}
+
+textarea.contact-form-formcontrol-input {
+  min-height: 220px;
+}
+
+.contact-form-formcontrol-input:focus {
   border-color: var(--border-strong);
-  box-shadow: 0 0 0 3px rgba(125, 135, 148, 0.18);
+  box-shadow: 7px 7px 0 var(--surface-shadow-strong);
+  transform: translate(-2px, -2px);
 }
 
 .contact-form-formcontrol-error {
@@ -52,24 +66,29 @@
 }
 
 .contact-form-formcontrol-submit {
-  padding: 10px 30px;
+  padding: 12px 34px;
   background-color: var(--main-text-color);
-  border: none;
-  border-radius: 10px;
+  border: 3px solid var(--border-one);
+  border-radius: 8px;
   color: var(--background-two);
   font-size: 18px;
+  font-weight: 800;
   cursor: pointer;
-  max-width: 120px;
+  max-width: 160px;
   min-height: 44px;
+  box-shadow: 6px 6px 0 var(--surface-shadow);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .contact-form-formcontrol-submit:hover {
-  opacity: 0.9;
+  box-shadow: 8px 8px 0 var(--surface-shadow-strong);
+  transform: translate(-2px, -2px);
 }
 
 @media only screen and (max-width: 520px) {
   .contact-form {
-    padding: 0;
+    padding: 18px;
+    box-shadow: 6px 6px 0 var(--surface-shadow);
   }
 
   .contact-form-formcontrol {

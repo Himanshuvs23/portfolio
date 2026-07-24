@@ -95,18 +95,21 @@
 
 .about-left-action {
   padding: 14px 22px;
-  border-radius: 999px;
-  border: 1px solid var(--main-text-color);
-  background: transparent;
+  border-radius: 8px;
+  border: 3px solid var(--main-text-color);
+  background: var(--background-two);
   color: var(--main-text-color);
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  box-shadow: 6px 6px 0 var(--surface-shadow);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .about-left-action:hover {
   background: var(--main-text-color);
   color: var(--background-two);
+  box-shadow: 8px 8px 0 var(--surface-shadow-strong);
+  transform: translate(-2px, -2px);
 }
 
 .about-left-action.resume {
@@ -131,10 +134,10 @@
   height: 380px;
   width: 380px;
   background: linear-gradient(225deg, var(--about-profilepic-one), var(--about-profilepic-two));
-  border: 1px solid var(--border-one);
+  border: 3px solid var(--border-one);
   padding: 12px;
   position: relative;
-  box-shadow: 0 24px 80px var(--surface-shadow);
+  box-shadow: 10px 10px 0 var(--surface-shadow);
   animation: pulse-ring 6s ease-in-out infinite;
   overflow: hidden;
 }

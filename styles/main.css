@@ -30,18 +30,19 @@ a {
   color: inherit;
 }
 
-:root {
-  --background-one: #ffffff;
-  --background-two: #fbfbfb;
-  --secondary-background-one: #f2f4f7;
+[data-theme="dark"]{
+  --background-one: #000000;
+  --background-two: #000000;
+  --secondary-background-one: #ffffff;
   --main-text-color: #000000;
   --text-color-one: #111111;
   --text-color-two: #333333;
-  --border-one: #c7ccd4;
-  --border-strong: #7d8794;
-  --surface-shadow: rgba(15, 23, 42, 0.12);
+  --border-one: #ffffff;
+  --border-strong: #ffffff;
+  --surface-shadow: rgba(0, 0, 0, 0.22);
+  --surface-shadow-strong: rgba(0, 0, 0, 0.32);
   --navbar-background: rgba(255, 255, 255, 0.88);
-  --navbar-border: rgba(15, 23, 42, 0.16);
+  --navbar-border: rgb(15, 23, 42);
   --bottom-nav-background: rgba(255, 255, 255, 0.76);
   --about-profilepic-one: #f5f5f5;
   --about-profilepic-two: #e5e5e5;
@@ -51,16 +52,17 @@ a {
   --circular-loader: #000000;
 }
 
-[data-theme="dark"] {
+ :root  {
   --background-one: #000000;
   --background-two: #000000;
   --secondary-background-one: #111111;
   --main-text-color: #ffffff;
   --text-color-one: #dddddd;
   --text-color-two: #bbbbbb;
-  --border-one: rgba(255, 255, 255, 0.22);
+  --border-one: rgb(255, 255, 255);
   --border-strong: rgba(255, 255, 255, 0.54);
   --surface-shadow: rgba(255, 255, 255, 0.08);
+  --surface-shadow-strong: rgba(255, 255, 255, 0.14);
   --navbar-background: rgba(10, 10, 10, 0.88);
   --navbar-border: rgba(255, 255, 255, 0.12);
   --bottom-nav-background: rgba(20, 20, 20, 0.9);

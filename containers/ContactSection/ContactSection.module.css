@@ -20,7 +20,8 @@
   width: 100%;
   margin: 0 auto 30px auto;
   border-radius: 8px;
-  border: 1px solid var(--border-one);
+  border: 3px solid var(--border-one);
+  box-shadow: 7px 7px 0 var(--surface-shadow);
   word-break: break-all;
   color: var(--text-color-one);
 }

@@ -1,13 +1,13 @@
 .project-card {
-  padding: 15px;
+  padding: 18px;
   background-color: var(--secondary-background-one);
-  border: 1px solid var(--border-one);
-  border-radius: 10px;
+  border: 3px solid var(--border-one);
+  border-radius: 8px;
   width: min(100%, 450px);
   text-align: center;
   color: var(--text-color-one);
   transition: all 0.5s ease-in-out;
-  box-shadow: 0 16px 34px -30px var(--surface-shadow);
+  box-shadow: 10px 10px 0 var(--surface-shadow);
 }
 
 .project-card img {
@@ -16,7 +16,7 @@
   aspect-ratio: 5 / 3;
   object-fit: cover;
   border-radius: 8px;
-  border: 1px solid var(--border-one);
+  border: 3px solid var(--border-one);
 }
 
 .project-card-placeholder {
@@ -31,7 +31,7 @@
   font-size: 34px;
   font-weight: 700;
   text-transform: uppercase;
-  border: 1px solid var(--border-one);
+  border: 3px solid var(--border-one);
   border-radius: 8px;
 }
 
@@ -53,13 +53,16 @@
 }
 
 .project-card-techStack-tech {
-  border: 1px solid var(--border-one);
+  border: 2px solid var(--border-one);
   display: inline-flex;
   margin: 3px 5px 3px -1px;
   font-size: 12px;
   padding: 4px;
   color: var(--text-color-one);
   font-weight: 600;
+  border-radius: 6px;
+  background: var(--background-two);
+  box-shadow: 3px 3px 0 var(--surface-shadow);
 }
 
 .project-card-links {
@@ -74,10 +77,11 @@
   height: 35px;
   aspect-ratio: auto;
   object-fit: contain;
-  border: 1px solid var(--border-one);
+  border: 2px solid var(--border-one);
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  box-shadow: 4px 4px 0 var(--surface-shadow);
 }
 
 @media only screen and (max-width: 520px) {
@@ -100,5 +104,6 @@
 
 .project-card:hover {
   border-color: var(--border-strong);
-  box-shadow: 0 18px 44px -30px var(--surface-shadow);
+  box-shadow: 12px 12px 0 var(--surface-shadow-strong);
+  transform: translate(-2px, -2px);
 }

@@ -32,14 +32,15 @@
 
 .skill-card-container-item {
   padding: 12px 18px;
-  border: 1px solid var(--border-one);
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.04);
+  border: 3px solid var(--border-one);
+  border-radius: 8px;
+  background: var(--background-two);
   color: var(--main-text-color);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  box-shadow: 5px 5px 0 var(--surface-shadow);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
 }
 
@@ -58,9 +59,10 @@
 }
 
 .skill-card-container-item:hover {
-  transform: translateY(-2px);
+  transform: translate(-2px, -2px);
   background-color: var(--main-text-color);
   color: var(--background-two);
+  box-shadow: 7px 7px 0 var(--surface-shadow-strong);
 }
 
 @media only screen and (max-width: 768px) {
